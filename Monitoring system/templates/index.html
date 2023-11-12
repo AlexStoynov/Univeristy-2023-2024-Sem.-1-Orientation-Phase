@@ -1,0 +1,43 @@
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<Body>
+    <h1>The exact time is: {{time}}</h1>
+    <h1>Tempereture is: {{temperature}}</h1>
+    <h1>Humidity is: {{humidity}}%</h1>
+    <h1>Sensor id is {{id}}</h1>
+    <h1>Light level is: {{light}}</h1>
+    <h1>Average light level is {{average}}</h1>
+    <h1>Max light level is {{max}}</h1>
+    <h1>Max light level is {{min}}</h1>
+
+    {% if pairs == [] %}
+            <p>No pairs at the moment.</p>
+        {% else %}
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Time</th>
+                    <th></th>
+                    <th>Light</th>
+                    <th></th>
+                    <th>Temperature</th>
+                    <th></th>
+                    <th>Humidity</th>
+                </tr>
+                {% for (Time, Light, Temperature, Humidity) in pairs %}
+                    <tr>
+                        <td>{{ loop.index }}.</td>
+                        <td>{{ Time }}</td>
+                        <td>{{ Light }}</td>
+                        <td>{{Temperature}}</td>
+                        <td>{{Humidity}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+
+</Body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html><html>
+
+<head>
+    <title>Messages</title>
+</head>
+
+<body>
+
+    <h1>Messages</h1>
+
+    {% if messages == [] %}
+        <p>No messages at the moment.</p>
+
+    {% else %}
+        <table>
+            <tr>
+
+                <th>Title</th>
+                <th>Author</th>
+                <th>Body</th>
+
+            </tr>
+
+            {% for (title, author, body) in messages %}
+
+                <tr>
+
+                    <td>{{ title }}</td>
+                    <td>{{ author }}</td>
+                    <td>{{ body }}</td>
+
+                </tr>
+
+            {% endfor %}
+        </table>
+
+    {% endif %}
+</body>
+
+</html>

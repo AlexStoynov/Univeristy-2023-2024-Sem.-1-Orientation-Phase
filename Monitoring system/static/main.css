@@ -1,0 +1,63 @@
+/* Apply basic styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style the header */
+h1 {
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Style the data sections */
+h1:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+/* Style the table */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Style table headers */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Style table cells */
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Style the "No data" message */
+p {
+    color: #555;
+}
+
+/* Add some spacing to the table cells */
+td:not(:first-of-type) {
+    padding-left: 20px;
+}
+
+/* Center align the table cell content */
+td, th {
+    text-align: center;
+}

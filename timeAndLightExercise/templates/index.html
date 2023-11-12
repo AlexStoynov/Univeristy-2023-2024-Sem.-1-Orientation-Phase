@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="refresh" content="5">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>{{timeLightPairs[-1][0]}}</h1>
+        <h2>Light level: {{timeLightPairs[-1][1]}}</h2>
+    </header>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Time</th>
+            <th></th>
+            <th>Light</th>
+        </tr>
+        {% for pair in timeLightPairs %}
+        <tr>
+            <td>{{ loop.index }}.</td>
+            <td>{{ pair[0] }}</td>
+            <td></td>
+            <td>{{ pair[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
